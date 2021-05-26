@@ -1,0 +1,76 @@
+.signaturePad{
+    border: 3px solid black;
+    border-radius: 25px;
+    margin-bottom:10px;
+}
+
+button{
+    border-radius: 5px;
+    padding:5px;
+}
+
+.main_wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.prediction_wrapper{
+    display:flex;
+    flex-direction: row;
+}
+
+.whiteBoxWrapper{
+    background-color: white;
+    border-radius: 25px;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:2%;
+}
+
+.ioWrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.outputWrapper{
+    width:30%;
+}
+
+.correctResult{
+    color:#1C9813;
+}
+
+.wrongResult{
+    color:#DC1919;
+}
+
+.resultLabelWrapper{
+    display:flex;
+    flex-direction:row;
+}
+
+.speakButtonWrapper{
+    margin:10px;
+}
+
+.description{
+    margin-bottom: 5px;
+}
+
+body{
+    background-color:#99D1F6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    padding-left:2%;
+    padding-right:2%;
+}
+
+.signature-pad--actions{
+    display:flex;
+    flex-direction: row;
+}
+
+.titleImage{
+    width: 50%;
+}

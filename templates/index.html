@@ -1,0 +1,72 @@
+<!doctype html5>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing script</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'index.css') }}"> 
+  </head>
+  <body>
+      <div>
+        <!-- <h1 class = "websiteMainLabel">Alphabet AI Practice</h1> -->
+        <img class = "titleImage" src="{{url_for('static', filename='title.png')}}"/>
+      </div>
+      <div class = "whiteboxWrapper">
+        <div class = "ioWrapper">
+            <div class = "inputWrapper">
+                <div class = "speakButtonWrapper">
+                    <button type = "button" id = "say" class="say">Start Practice &#x266b</button>
+                </div>
+                <div id="signature-pad" class="signature-pad">
+                    <div class="description">Please write your alphabet here:</div>
+                    <div class="signature-pad--body">
+                    <canvas class="signaturePad"></canvas>
+                    </div>
+                    <div class="signature-pad--footer">
+                
+                    <div class="signature-pad--actions">
+                        <div style = "margin-right : 5px;">
+                            <button type="button" class="button save" data-action="save-png">Check Answer</button>
+                        </div>
+                        <div>
+                        <button type="button" class="button clear" data-action="clear">Clear</button>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "outputWrapper">
+                <div class = "formWrapper">
+                    <form id = "predictionDataWrapper" action="/predict" method="POST">
+                        <input type="hidden" id = "signatureBlob" name = "signatureBlob"/>
+                        <input type="hidden" name="targetAlphabet" id= "targetAlphabet"/>
+                    </form>
+                </div>
+                <div class = "resultLabelWrapper">
+                    <p style = "margin-right : 5px;">Result: </p>
+                    {% if prediction_result == "Correct" %}
+                        <p class = "correctResult">{{prediction_result}}</p>
+                    {% elif prediction_result == "Incorrect" %}
+                        <p class = "wrongResult" >{{prediction_result}}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <p>What we expect: {{target}}</p>
+                </div>
+                <div>
+                    <p>What we got: {{actual}}</p>
+                </div>
+            </div>
+        </div>
+        <div class = "instructionWrapper">
+            <p>Instructions: </p>
+            <p>Please click on the "Start Practice" button to get a random alphabet. Remember to listen carefully to the alphabet given.<br>
+                Once you have received your alphabet, write it down in the empty space given. To clear your answer, click on the "Clear" button.<br>
+                After you're ready, click on the "Check answer" button to see check your answer and results will be shown on the right.</p>
+            <br>
+        </div>
+    </div>
+  </body>  
+  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'app.js') }}"></script>
+</html>
