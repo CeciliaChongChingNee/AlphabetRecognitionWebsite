@@ -53,42 +53,28 @@ Our goal is to train a CNN model that is capable of predicting/recognizing the i
 ## D.   PROJECT STRUCTURE
 The following directory is our structure of our project
 
-    ├── dataset
-    │ ├── A-Z handwritten characters.csv [372,450 entries]
-    | └── AlphabetData
-    |   ├── A
-    |   └── B
-    |   └── C
-    |   └── D
-    |   └── E
-    |   └── F
-    |   └── G
-    |   └── H
-    |   └── I
-    |   └── J
-    |   └── K
-    |   └── L
-    |   └── M
-    |   └── N
-    |   └── o
-    |   └── P
-    |   └── Q
-    |   └── R
-    |   └── S
-    |   └── T
-    |   └── U
-    |   └── V
-    |   └── W
-    |   └── X
-    |   └── Y
-    |   └── Z
-    ├── model
-    │ ├── best_model.h5
-    ├── trainModelScript.py
-    ├── generateCSVScript.py
-    ├── testModelScript.py
-    └── serverApp.py
-    28 directories, 6 files
+    E:.
+    │   alphabet.yml
+    │   AlphabetData.zip
+    │   A_Z Handwritten Data.csv
+    │   Final Project Notebook.ipynb
+    │   image.jpg
+    │   model_hand.h5
+    │   README.md
+    │   serverApp.py
+    │
+    ├───.ipynb_checkpoints
+    │       Final Project Notebook-checkpoint.ipynb
+    │
+    ├───static
+    │       app.js
+    │       index.css
+    │       index.js
+    │       title.png
+    │
+    └───templates
+            index.html
+            website.html
 
 
 ## E   TRAINING THE HANDWRITTEN CHARACTER RECOGNITION MODEL
